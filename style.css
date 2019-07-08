@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    overflow: hidden
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    background-color: lightblue;
+}
+
+
+#outer {
+    position: relative;
+    text-align: center;
+    /* border: 2px solid green; */
+    height: 100vh;
+}
+
+#vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+#inner {
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 5vh;
+    left: 10vw;
+    /* border: 2px solid orange; */
+}
+
+#text {
+    color: black;
+    font-size: 100px;
+    /* z-index: 10; */
+    /* border: 2px solid orange; */
+    font-family:courier;
+}
+
+#box {
+    /* border: 2px solid yellow; */
+}
+
+#rect {
+    width: 90vw;
+    height: 90vh;
+    fill: rgb(0,90,128);
+}
+
+#text {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  } 
+
+#target {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    /* border: 2px solid orange; */
+    z-index: 10;
+}
