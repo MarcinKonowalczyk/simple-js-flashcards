@@ -13,11 +13,6 @@ html, body {
     background: transparent;
 }
 
-body {
-    background-color: lightblue;
-}
-
-
 #outer {
     position: relative;
     text-align: center;
@@ -43,21 +38,34 @@ body {
 }
 
 #text {
-    color: black;
-    font-size: 100px;
-    /* z-index: 10; */
+    font-size: 120px;
     /* border: 2px solid orange; */
-    font-family:courier;
+    font-family:Verdana;
+    z-index: 9;
+}
+
+#text2 {
+    font-size: 23px;
+    position: absolute;
+    right: 6vw;
+    top: 2vh;
+    /* border: 2px solid orange; */
+    font-family:Verdana;
+    z-index: 9;
 }
 
 #box {
-    /* border: 2px solid yellow; */
+    /* position: relative; */
+    /* border: 2px solid olivedrab; */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* width: 90vw; */
 }
 
 #rect {
     width: 90vw;
     height: 90vh;
-    fill: rgb(0,90,128);
+    /* fill: rgb(0,90,128); */
 }
 
 #text {
