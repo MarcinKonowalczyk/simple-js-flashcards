@@ -40,34 +40,42 @@ function update() {
         text = document.getElementById("text");
         text.innerHTML = question;
         text.style = `color:${question_color_1}`;
-        console.log(question)
+        console.log(`Question: ${question}`)
 
-        document.getElementById("rect").style = `fill:${question_color_2}`;
+        rectangle = document.getElementById("rect");
+        rectangle.style = `fill:${question_color_2}`;
         document.body.style = `background-color:${question_color_1}`
-
-        text2 = document.getElementById("text2");
-        text2.innerHTML = `Total question count: ${update_count}`;
-        text2.style = `color:${question_color_3}`
-
-        text3 = document.getElementById("text3");
-        text3.innerHTML = `Question number: ${selection}`;
-        text3.style = `color:${question_color_3}`
         
+        // Find text elements
+        text2 = document.getElementById("text2"); // Total question count
+        text3 = document.getElementById("text3"); // Current question number
+        
+        // Update colors
+        text2.style = `color:${question_color_3}`;
+        text3.style = `color:${question_color_3}`;
+
+        // Update text
+        text2.innerHTML = `Total question count: ${update_count}`;
+        text3.innerHTML = `Question number: ${selection+1}`; // Dispaly 1 indexted question number
+
         flag = false;
     } else {
         text = document.getElementById("text");
 
         text.innerHTML = answer;
         text.style = `color:${answer_color_1}`;
-        console.log(answer)
+        console.log(`Answer: ${answer}`)
 
-        document.getElementById("rect").style = `fill:${answer_color_2}`;
+        rectangle = document.getElementById("rect");
+        rectangle.style = `fill:${answer_color_2}`;
         document.body.style = `background-color:${answer_color_1}`
 
+        // Find text elements
         text2 = document.getElementById("text2");
-        text2.style = `color:${answer_color_3}`
-
         text3 = document.getElementById("text3");
+        
+        // Update colors
+        text2.style = `color:${answer_color_3}`
         text3.style = `color:${answer_color_3}`
 
         flag = true;
