@@ -47,8 +47,18 @@ html, body {
 #text2 {
     font-size: 23px;
     position: absolute;
-    right: 6vw;
+    right: 7vw;
     top: 2vh;
+    /* border: 2px solid orange; */
+    font-family:Verdana;
+    z-index: 9;
+}
+
+#text3 {
+    font-size: 23px;
+    position: absolute;
+    right: 7vw;
+    bottom: 2vh;
     /* border: 2px solid orange; */
     font-family:Verdana;
     z-index: 9;

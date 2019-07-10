@@ -18,10 +18,12 @@ var question_count = new Array(questions.length).fill(0);
 var update_count = 0;
 
 // Colors
-const question_color_1 = "#D7C49EFF";
-const question_color_2 = "#343148FF";
-const answer_color_1 = "#FFD662FF";
-const answer_color_2 = "#00539CFF";
+const question_color_1 = "#D7C49EFF"; // Background and text
+const question_color_2 = "#343148FF"; // Rectange
+const question_color_3 = "#B0A182FF"; // Accents
+const answer_color_1 = question_color_1; //"#FFD662FF";
+const answer_color_2 = "#3A4730FF"; //"#414730FF";
+const answer_color_3 = question_color_3;
 
 function update() {
     // window.alert("test")
@@ -42,12 +44,16 @@ function update() {
 
         document.getElementById("rect").style = `fill:${question_color_2}`;
         document.body.style = `background-color:${question_color_1}`
-        flag = false;
 
         text2 = document.getElementById("text2");
-        text2.innerHTML = `${update_count}`;
-        text2.style = `color:${question_color_1}`
-        // style="color:#FFE77AFF"
+        text2.innerHTML = `Total question count: ${update_count}`;
+        text2.style = `color:${question_color_3}`
+
+        text3 = document.getElementById("text3");
+        text3.innerHTML = `Question number: ${selection}`;
+        text3.style = `color:${question_color_3}`
+        
+        flag = false;
     } else {
         text = document.getElementById("text");
 
@@ -57,6 +63,13 @@ function update() {
 
         document.getElementById("rect").style = `fill:${answer_color_2}`;
         document.body.style = `background-color:${answer_color_1}`
+
+        text2 = document.getElementById("text2");
+        text2.style = `color:${answer_color_3}`
+
+        text3 = document.getElementById("text3");
+        text3.style = `color:${answer_color_3}`
+
         flag = true;
     }
 }
